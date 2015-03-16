@@ -36,8 +36,7 @@
           <div class="panel-heading">
             <h3 class="panel-title">Easy Rule</h3>
           </div>
-          <div class="panel-body">
-            Panel content
+          <div id='easy-body' class="panel-body">
           </div>
         </div>
 
@@ -45,8 +44,7 @@
           <div class="panel-heading">
             <h3 class="panel-title">Medium Rule</h3>
           </div>
-          <div class="panel-body">
-            Panel content
+          <div id='medium-body' class="panel-body">
           </div>
         </div>
 
@@ -54,8 +52,7 @@
           <div class="panel-heading">
             <h3 class="panel-title">Hard Rule</h3>
           </div>
-          <div class="panel-body">
-            Panel content
+          <div id='hard-body' class="panel-body">
           </div>
         </div>
       </div>
@@ -178,11 +175,17 @@
     <script src="http://code.jquery.com/jquery-latest.min.js"></script>
     <script src="javascripts/bootstrap.min.js"></script>
     <script src="javascripts/main.js"></script>
+    <script type="text/javascript">
+      if (top.location != self.location) {
+        top.location = self.location;
+      }
+    </script>
     <script>
       $(document).ready(function() {
         $(".panel-warning").hide();
         $(".panel-danger").hide();
         $("#game-rules").hide();
+        $("#easy-body").html("<p>" + easyRule() + "</p>");
 
         $("#rule-generator-button").click(function(event) {
           event.preventDefault;
@@ -207,6 +210,7 @@
           $("#easy-button").addClass("active");
           $(".panel-warning").hide();
           $(".panel-danger").hide();
+          $("#easy-body").text(easyRule());
           $(".panel-info").show();
         });
 
