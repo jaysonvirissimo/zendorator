@@ -23,18 +23,18 @@
 
         <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-2">
           <ul class="nav navbar-nav">
-            <li class="active"><a href="#">Rule Generator <span class="sr-only">(current)</span></a></li>
-            <li><a href="#">Game Rules</a></li>
+            <li id='rule-generator-button' class="active"><a href="#">Rule Generator <span class="sr-only">(current)</span></a></li>
+            <li id='game-rules-button'><a href="#">Game Rules</a></li>
           </ul>
         </div>
       </div>
     </nav>
 
-    <section id='main-content' class='container'>
+    <section id='generator' class='container'>
       <div class='well'>
         <div class="panel panel-info">
           <div class="panel-heading">
-            <h3 class="panel-title">East Rule</h3>
+            <h3 class="panel-title">Easy Rule</h3>
           </div>
           <div class="panel-body">
             Panel content
@@ -51,7 +51,131 @@
       </div>
     </section>
 
+    <section id='game-rules' class='container'>
+      <div class='well'>
+        <p><em>Designed by Kory Heath</em></p>
+        <p><em>Does a dog have Buddha-nature?<br>
+        	This is the most serious question of all.<br>
+        	If you answer yes or no<br>
+        	You lose your own Buddha-nature.</em></p>
+        <p><br>
+        	<strong>Introduction</strong>: Zendo is a game of inductive logic in which the Master creates a rule and the Students attempt to discover it by building and studying small arrangements of Looney Pyramids. The first student to state the rule correctly wins.<br>
+        	<br>
+        	<strong>Number of Players</strong>: 3-6<br>
+        	<br>
+        	<strong>Equipment</strong>: 5 Rainbow Stashes, 60 tokens (20 each of black, white, and a third color)<br>
+        	<br>
+        	<strong>Setup</strong>: Choose someone to be the Master. The other players are the Students. Give each Student a black and a white stone, to serve as “answering stones”. The remaining black and white stones are “marking stones”, and the stones of the third color are “guessing stones”. Put all of the marking stones and guessing stones in front of the Master, and put all of the pyramids into a global stash within reach of all the Students.<br>
+        	<br>
+        	The Master must choose a rule, create two initial koans, and pick someone to go first.<br>
+        	<br>
+        	<strong>Koans</strong>: Over the course of the game, players will create different arrangements of one or more pyramids on the table. Each arrangement is referred to as a “koan”, pronounced “KO-ahn”. Koans can be set up in any fashion, as long as they don’t touch other objects or other koans.<br>
+        	<br>
+        	<strong>Choosing a Rule</strong>: When you are selected to be the Master, your first task is to devise a secret rule that will be used during this game of Zendo. For your first several games, you may want to use one of the rules listed on page 7 under “Rules For Beginners.” These are good rules for new players. When the players are more experienced, you can invent your own rule.<br>
+        	<br>
+        	According to your rule, some koans will “have the Buddha-nature”, and others will not. For the Students, the object of the game is to try to figure out what your secret rule is. As the Master, your job is to act as facilitator; you are not actually a player, and you are not in competition with any of the players. Here are some rule examples:</p>
+        <ul>
+        	<li>A Simple Rule: A koan has the Buddha-nature if and only if it contains one or more green pieces.</li>
+        	<li>A Very Difficult Rule: A koan has the Buddha-nature if and only if it contains an odd number of pieces pointing at other pieces.</li>
+        	<li>A “Negative” Rule: A koan does not have the Buddha-nature if it contains exactly three pieces touching the table; otherwise it does.</li>
+        </ul>
+        <p><strong>Initial Koans</strong>: As the Master, start the game off by building two koans in the middle of the playing field. One should have the Buddha-nature according to your rule; place a white stone next to it. The other should not; place a black stone next to it. You will be marking all of the koans in this way throughout the game. Starting koans need not be complicated, even with experienced players.<br>
+        	<strong>Turn Order for Students</strong>: Each student’s turn consists of the following steps:</p>
+        <ol>
+        	<li>Build a new koan</li>
+        	<li>Say “Master” or “Mondo”</li>
+        	<li>Optionally, try guessing the rule</li>
+        </ol>
+        <p><strong>1. Build a Koan</strong></p>
+        <ul>
+        	<li>Create a new koan using one or more pyramids from the global stash.</li>
+        </ul>
+        <p><strong>2. Say “Master” or “Mondo”</strong></p>
+        <ul>
+        	<li><strong>Master</strong>: The Master will immediately mark the new koan with a black or white stone.</li>
+        </ul>
+        <ul>
+        	<li><strong>Mondo</strong>: All Students must guess if the new koan has the Buddha-nature or not. Pick up your own answering stones and hide your answer (black or white) in one fist. Hold that fist out over the playing field, and wait for all of the other Students to do the same. When everyone is ready, reveal your guess. The Master will mark the koan with the correct answer, and will award a guessing stone to each player who answered the Mondo correctly.</li>
+        </ul>
+        <p><strong>3. Guess the Rule (optional)</strong></p>
+        <ul>
+        	<li><strong>Make a Guess</strong>: If you have any guessing stones, you may choose to spend one or more of them to try to guess the Master’s rule. Give a guessing stone to the Master and then state your guess as clearly as you can.</li>
+        </ul>
+        <ul>
+        	<li><strong>Clarify the Guess</strong>: If the Master does not fully understand your guess, or if it is ambiguous in some way, the Master will ask clarifying questions until the uncertainty has been resolved. Your guess is not considered to be official until both you and the Master agree that it is official. At any time before that, you may retract your guess and take back your stone, or you may change your guess. If any koan on the table contradicts your guess, the Master should point this out, and you may take back your stone or change your guess. It is the Master’s responsibility to make certain that a guess is unambiguous and is not contradicted by an existing koan; all Students are encouraged to participate in this process.</li>
+        </ul>
+        <ul>
+        	<li><strong>Master Disproves Guess</strong>: After you and the Master agree upon an official guess, the Master will disprove it, if possible. The Master builds a koan which has the Buddha-nature but which your guess says does not, or builds a koan which does not have the Buddha-nature but which your guess says does.</li>
+        </ul>
+        <ul>
+        	<li><strong>Repeat</strong>: Once the Master has built a counter example and marked it appropriately, you may spend another guessing stone, if you have one, to take another guess. You may spend as many of your guessing stones as you wish during this portion of your turn. When you are finished, the action passes to the Student on your left.</li>
+        </ul>
+        <p><strong>Winning</strong>: If the Master is unable to disprove your official guess, you’ve achieved enlightenment: you’ve discovered the Master’s secret rule and have won the game!<br>
+        	<br>
+        	<strong>Selecting a Master</strong>: There are no official rules about selecting a Master. If one person has many new rules to try out, that person may be selected as the Master for the entire evening. If everyone has rules to try out, simply take turns being the Master, or specify that the winner of each game becomes the next Master. If you have one experienced player in a group of new players, that player ought to be the Master, at least for the first few games.<br>
+        	<br>
+        	<strong>Creating Rules</strong>: When you are the Master, you may use any rule that you can imagine, though you should always try to select a rule that is not too difficult for the current group of players. When in doubt, use an easier rule. Beginning Masters vastly underestimate the difficulty of most rules, and players do not enjoy games where the rule is too difficult. Many rules that sound interesting can actually result in frustrating games.<br>
+        	<br>
+        	There are some official restrictions, which are all consequences of a basic relational property of koans: a koan is not allowed to refer to anything outside of itself, in space or in time. This has several implications:</p>
+        <ul>
+        	<li><strong>No Outside References</strong>: You may not make a rule that specifies whether or not a piece is pointing at one of the players, because players are things that exist outside of koans. You may not make a rule that specifies whether or not a piece is pointing in an absolute direction (say, toward one side of the room), because absolute directions are also things that exist outside of koans. Here’s a good rule-of-thumb: rotating any individual koan, or even moving it into another room, should not cause its status to change.</li>
+        </ul>
+        <ul>
+        	<li><strong>No References to Other Koans</strong>: You may not make a rule in which the status of a koan is affected by the contents of other koans on the table. For instance, the rule “a koan has the Buddha-nature if it contains the same number of pieces as any other koan on the table” is illegal, because koans cannot refer to each other in this fashion. Think of each koan as a tiny microcosm—a small, isolated universe that cannot refer to anything but itself.</li>
+        </ul>
+        <ul>
+        	<li><strong>No References to Time:</strong> Koans are isolated in time as well as space. You may not make a rule that refers to pieces which used to be in a koan, because a koan’s past state is something that exists outside of that koan in time. You may not make a rule that has something to do with the order in which pieces were added to a koan. Here is another good rule-of-thumb: as the Master, you should be able to leave the room while a Student is setting up a koan, and still be able to mark it properly when you return. Note that all pieces of a given size and color are considered to be identical and interchangeable.</li>
+        </ul>
+        <ul>
+        	<li><strong>Referring to the Table</strong>: The playing surface itself is considered to be part of a koan—it is legal, for instance, to make a rule that species whether or not certain pieces are touching the table. However, you may not make a rule that refers to some pattern or design on the playing surface, nor may you make a rule that refers to the edges of the surface. Consider the playing surface to be a at, featureless plane that extends outward in all directions, “whose center is everywhere and whose circumference is nowhere”, as the philosophers might say.</li>
+        </ul>
+        <ul>
+        	<li><strong>No References to Stones</strong>: The black &amp; white marking stones are not actually contained within koans, so you may not make a rule that refers to them.</li>
+        </ul>
+        <p><strong>Building Koans</strong>: When you build a koan, you may arrange its pieces in any fashion, as long as they do not touch another koan’s pieces or any other foreign objects, including marking stones. It is legal to lean a koan’s pieces against each other or to balance them precariously on top of each other. The Master may move any existing koan in order to help distinguish it from another one or to clear space for more of them. The Master should make the moved koan as similar as possible to the way it was before. The Master may disallow a koan from being built if there is not enough space for it.<br>
+        	<br>
+        	<strong>Breaking Down Old Koans</strong>: If, when building a new koan, the pieces you’d like to use are not available, tell everyone which pieces you’re looking for. The Master must decide which koan or koans to break down, if any, taking into account the input of all of the Students as much as possible. If all of the Students agree to allow a certain koan to be broken down, the Master should always do so. If, when building a counterexample koan, the Master wants to use pieces that are not available, the Master will tell everyone which pieces are needed, and will decide which koan or koans to break down, taking into account the input of all of the Students as much as possible.<br>
+        	<br>
+        	<strong>Marking Difficult Koans</strong>: The Master’s rule must provide an answer for any koan that a Student could possibly build. Sometimes the Master has difficulty deciding how a certain koan ought to be marked, because of some physical ambiguity, such as “is that red piece just barely pointing at that blue piece, or is it just missing it?” In such cases, the Master must make a silent judgment call, and then mark the koan appropriately. The Master must not indicate that a judgment call has been made.<br>
+        	<br>
+        	<strong>Asking About Koans</strong>: Players may always ask the Master clarifying questions about the physical features of existing koans, such as “Master, is that small green piece pointing at the medium red piece?” or “Master, which pieces are touching that yellow piece?” These questions are free and may be asked at any time. The Master must always answer them, even if they have no bearing on the actual rule. Students may even ask about a koan before they are done building it, such as “Master, is this new koan just like this old one, except that the red piece is now blue?” In all matters of uncertainty, the Master’s judgments are final.<br>
+        	<br>
+        	<strong>Guesses and Previously-Existing Koans</strong>: If none of the koans on the table can disprove a particular guess, but a previously existing koan that has since been broken down would disprove the guess, the guess still stands and the guessing stone is not returned. Only koans actually in play are used to determine whether a guess is valid. The Master can build the previous koan again as the counterexample, or may build something entirely new.<br>
+        	<br>
+        	<strong>Katsu</strong>: As a Student, you are never allowed to touch a marking stone, or a koan that has a marking stone next to it. If you ever accidentally knock over or disturb a koan’s pieces, someone should say “katsu!” in order to indicate that the board has been disturbed. The Master must then restore the table to its previous state. There is no penalty for katsu.<br>
+        	<br>
+        	<strong>Master’s Mistakes</strong>: It sometimes happens that a Master makes a mistake which compromises the fairness of the game for the students. When such an error is discovered, any player may immediately demand that the game be terminated. If all players agree to continue the game, the Master should correct the mistake in the appropriate manner.</p>
+        <ul>
+        	<li><strong>Mismarked Koan</strong>: The Master might mark a koan incorrectly and fail to x it before a player has taken another action. If this happens, the Master should x the mistake as soon as it’s noticed.</li>
+        </ul>
+        <ul>
+        	<li><strong>Misunderstood Guess</strong>: The Master might not completely understand a Student’s guess and make a koan that does not disprove it. If this happens, the new koan must remain on the table and the Master must make another koan after the ambiguity is resolved. As Master, you should understand a Student’s guess well enough to play another game of Zendo with it as the secret rule.</li>
+        </ul>
+        <ul>
+        	<li><strong>Disproving Koan on the Table</strong>: The Master might miss the fact that one of the koans on the table disproves the Student’s guess and create another koan to disprove it. In this case, the guess stands, the new koan remains, and the Student does not get the guessing stone back. All Students are encouraged to help the Master confirm that a Student’s guess works with all the koans on the table.</li>
+        </ul>
+      </div>
+    </section>
+
     <script type="text/javascript" src="http://code.jquery.com/jquery-latest.min.js"></script>
     <script src="javascripts/bootstrap.min.js"></script>
+    <script src="javascripts/main.js"></script>
+    <script>
+      $(document).ready(function() {
+        $("#rule-generator-button").click(function() {
+          $("#game-rules-button").removeClass("active");
+          $("#rule-generator-button").addClass("active");
+          $("#game-rules").hide()
+          $("#generator").show()
+        });
+
+        $("#game-rules-button").click(function() {
+          $("#rule-generator-button").removeClass("active")
+          $("#game-rules-button").addClass("active");
+          $("#generator").hide()
+          $("#game-rules").show()
+        });
+      });
+    </script>
   </body>
 </html>

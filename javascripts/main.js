@@ -1,1 +1,3 @@
-console.log('This would be the main JS file.');
+function randomSelection (array) {
+  return array[Math.floor(Math.random()*array.length)];
+}
