@@ -1,14 +1,15 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <meta charset='utf-8'>
-    <meta http-equiv="X-UA-Compatible" content="chrome=1">
-    <meta name="description" content="Zendorator : A generator of rules useful in Zendo, the game of inductive inference.">
-    <link rel="stylesheet" href="stylesheets/bootstrap.min.css">
-    <title>Zendorator</title>
-  </head>
-
-  <body>
+<head>
+  <meta charset='utf-8'>
+  <meta http-equiv="X-UA-Compatible" content="chrome=1">
+  <meta name="description" content="Zendorator : A generator of rules useful in Zendo, the game of inductive inference.">
+  <link rel="stylesheet" href="stylesheets/bootstrap.min.css">
+  <link rel="stylesheet" href="stylesheets/custom.css">
+  <title>Zendorator</title>
+</head>
+<body>
+  <header>
     <nav class="navbar navbar-inverse">
       <div class="container-fluid">
         <div class="navbar-header">
@@ -29,7 +30,9 @@
         </div>
       </div>
     </nav>
+  </header>
 
+  <main>
     <section id='generator' class='container'>
       <div class='well'>
         <div class="panel panel-info">
@@ -173,70 +176,79 @@
         </ul>
       </div>
     </section>
+  </main>
 
-    <script src="http://code.jquery.com/jquery-latest.min.js"></script>
-    <script src="javascripts/bootstrap.min.js"></script>
-    <script src="javascripts/main.js"></script>
-    <script type="text/javascript">
-      if (top.location != self.location) {
-        top.location = self.location;
-      }
-    </script>
-    <script>
-      $(document).ready(function() {
+  <footer>
+    <div class='navbar navbar-inverse navbar-fixed-bottom'>
+      <div class="container">
+        <p class="text-muted">The <a href='https://github.com/jaysonvirissimo/zendorator/tree/gh-pages'>source code</a> for Zendorator was written by <a href='http://virissimo.info/'>Jayson Virissimo</a> and released under the <a href='https://github.com/jaysonvirissimo/zendorator/blob/master/LICENSE'>BSD License</a>.</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="http://code.jquery.com/jquery-latest.min.js"></script>
+  <script src="javascripts/bootstrap.min.js"></script>
+  <script src="javascripts/main.js"></script>
+  <script type="text/javascript">
+    if (top.location != self.location) {
+      top.location = self.location;
+    }
+  </script>
+  <script>
+    $(document).ready(function() {
+      $(".panel-warning").hide();
+      $(".panel-danger").hide();
+      $("#game-rules").hide();
+      $("#easy-body").html("<p>" + easyRule() + "</p>");
+
+      $("#rule-generator-button").click(function(event) {
+        event.preventDefault;
+        $("#game-rules-button").removeClass("active");
+        $("#rule-generator-button").addClass("active");
+        $("#game-rules").hide();
+        $("#generator").show();
+      });
+
+      $("#game-rules-button").click(function(event) {
+        event.preventDefault;
+        $("#rule-generator-button").removeClass("active");
+        $("#game-rules-button").addClass("active");
+        $("#generator").hide();
+        $("#game-rules").show();
+      });
+
+      $("#easy-button").click(function(event) {
+        event.preventDefault;
+        $("#medium-button").removeClass("active");
+        $("#hard-button").removeClass("active");
+        $("#easy-button").addClass("active");
         $(".panel-warning").hide();
         $(".panel-danger").hide();
-        $("#game-rules").hide();
-        $("#easy-body").html("<p>" + easyRule() + "</p>");
-
-        $("#rule-generator-button").click(function(event) {
-          event.preventDefault;
-          $("#game-rules-button").removeClass("active");
-          $("#rule-generator-button").addClass("active");
-          $("#game-rules").hide();
-          $("#generator").show();
-        });
-
-        $("#game-rules-button").click(function(event) {
-          event.preventDefault;
-          $("#rule-generator-button").removeClass("active");
-          $("#game-rules-button").addClass("active");
-          $("#generator").hide();
-          $("#game-rules").show();
-        });
-
-        $("#easy-button").click(function(event) {
-          event.preventDefault;
-          $("#medium-button").removeClass("active");
-          $("#hard-button").removeClass("active");
-          $("#easy-button").addClass("active");
-          $(".panel-warning").hide();
-          $(".panel-danger").hide();
-          $("#easy-body").text(easyRule());
-          $(".panel-info").show();
-        });
-
-        $("#medium-button").click(function(event) {
-          event.preventDefault;
-          $("#easy-button").removeClass("active");
-          $("#hard-button").removeClass("active");
-          $("#medium-button").addClass("active");
-          $(".panel-info").hide();
-          $(".panel-danger").hide();
-          $(".panel-warning").show();
-        });
-
-        $("#hard-button").click(function(event) {
-          event.preventDefault;
-          $("#easy-button").removeClass("active");
-          $("#medium-button").removeClass("active");
-          $("#hard-button").addClass("active");
-          $(".panel-info").hide();
-          $(".panel-warning").hide();
-          $(".panel-danger").show();
-        });
-
+        $("#easy-body").text(easyRule());
+        $(".panel-info").show();
       });
-    </script>
-  </body>
+
+      $("#medium-button").click(function(event) {
+        event.preventDefault;
+        $("#easy-button").removeClass("active");
+        $("#hard-button").removeClass("active");
+        $("#medium-button").addClass("active");
+        $(".panel-info").hide();
+        $(".panel-danger").hide();
+        $(".panel-warning").show();
+      });
+
+      $("#hard-button").click(function(event) {
+        event.preventDefault;
+        $("#easy-button").removeClass("active");
+        $("#medium-button").removeClass("active");
+        $("#hard-button").addClass("active");
+        $(".panel-info").hide();
+        $(".panel-warning").hide();
+        $(".panel-danger").show();
+      });
+
+    });
+  </script>
+</body>
 </html>
