@@ -5,13 +5,13 @@ var quantities = ["two", "three"];
 var orientations = ["grounded", "ungrounded", "upright", "flat"];
 
 
-function randomSelection (array) {
+function randomSelection(array) {
   return array[Math.floor(Math.random()*array.length)];
 }
 
 function easyRule () {
   var rule = firstClause;
-  var number = randomSelection([0, 1, 2, 3, 4, 5, 6, 7, 8, 9])
+  var number = randomSelection([0, 1, 2, 3, 4, 5, 6, 7, 8, 9]);
 
   switch(number) {
     case 0:
@@ -42,7 +42,7 @@ function easyRule () {
       rule += "all of the pieces are " + randomSelection(orientations) + ", except for the " + randomSelection(colors) + " pieces.";
       break;
     case 9:
-      rule += "all of the pieces are " + randomSelection(orientations) + ", except for the " + randomSelection(sizes) + " pieces."
+      rule += "all of the pieces are " + randomSelection(orientations) + ", except for the " + randomSelection(sizes) + " pieces.";
       break;
   }
 
@@ -51,7 +51,7 @@ function easyRule () {
 
 function mediumRule () {
   var rule = firstClause;
-  var number = randomSelection([0, 1, 2, 3, 4, 5, 6, 7, 8, 9])
+  var number = randomSelection([0, 1, 2, 3, 4, 5, 6, 7, 8, 9]);
 
   switch(number) {
     case 0:
@@ -71,7 +71,7 @@ function mediumRule () {
       rule += "all the " + randomSelection(orientations) + " pieces are the same size.";
       break;
     case 5:
-      rule += "all the " + randomSelection(colors) + " pieces are the same size.";;
+      rule += "all the " + randomSelection(colors) + " pieces are the same size.";
       break;
     case 6:
       rule += "exactly half of the pieces are " + randomSelection(sizes) + ".";
