@@ -18,34 +18,53 @@ function easyRule () {
 
   switch(number) {
     case 0:
-      rule += "it has " + randomSelection(quantities) + " or more " + randomSelection(colors) + " pieces.";
+      quantity = randomSelection(quantities);
+      color = randomSelection(colors);
+      rule += "it has " + quantity + " or more " + color + " pieces.";
       break;
     case 1:
-      rule += "it has exactly one " + randomSelection(sizes) + " " + randomSelection(orientations) + " " + randomSelection(colors) + " piece.";
+      size = randomSelection(sizes);
+      orientation = randomSelection(orientations);
+      color = randomSelection(colors);
+      rule += "it has exactly one " + size + " " + orientation + " " + color + " piece.";
       break;
     case 2:
-      rule += "it has exactly two " + randomSelection(sizes) + " " + randomSelection(colors) + " pieces.";
+      size = randomSelection(sizes);
+      color = randomSelection(colors);
+      rule += "it has exactly two " + size + " " + color + " pieces.";
       break;
     case 3:
-      rule += "it has at least one " + randomSelection(colors) + " piece pointing at a " + randomSelection(colors) + " piece.";
+      color = randomSelection(colors);
+      rule += "it has at least one " + color + " piece pointing at a " + randomSelection(colors) + " piece.";
       break;
     case 4:
-      rule += "it has exactly one " + randomSelection(colors) + " piece and exactly one " + randomSelection(sizes) + " piece.";
+      color = randomSelection(colors);
+      size = randomSelection(sizes);
+      rule += "it has exactly one " + color + " piece and exactly one " + size + " piece.";
       break;
     case 5:
-      rule += "it has an equal number of " + randomSelection(colors) + " and " + randomSelection(sizes) + " pieces.";
+      color = randomSelection(colors);
+      size = randomSelection(sizes);
+      rule += "it has an equal number of " + color + " and " + size + " pieces.";
       break;
     case 6:
-      rule += "all flat pieces point at a " + randomSelection(sizes) + " piece.";
+      size = randomSelection(sizes);
+      rule += "all flat pieces point at a " + size + " piece.";
       break;
     case 7:
-      rule += "all of the " + randomSelection(colors) + " pieces are " + randomSelection(orientations) + ".";
+      color = randomSelection(colors);
+      orientation = randomSelection(orientations);
+      rule += "all of the " + color + " pieces are " + orientation + ".";
       break;
     case 8:
-      rule += "all of the pieces are " + randomSelection(orientations) + ", except for the " + randomSelection(colors) + " pieces.";
+      orientation = randomSelection(orientations);
+      color = randomSelection(colors);
+      rule += "all of the pieces are " + orientation + ", except for the " + color + " pieces.";
       break;
     case 9:
-      rule += "all of the pieces are " + randomSelection(orientations) + ", except for the " + randomSelection(sizes) + " pieces.";
+      orientation = randomSelection(orientations);
+      size = randomSelection(sizes);
+      rule += "all of the pieces are " + orientation + ", except for the " + size + " pieces.";
       break;
   }
 
