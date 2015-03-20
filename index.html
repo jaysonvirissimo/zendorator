@@ -41,6 +41,7 @@
             <h3 class="panel-title">Easy Rule</h3>
           </div>
           <div id='easy-body' class="panel-body">
+            Loading...
           </div>
         </div>
 
@@ -49,7 +50,7 @@
             <h3 class="panel-title">Medium Rule</h3>
           </div>
           <div id='medium-body' class="panel-body">
-            Coming soon...
+            Loading...
           </div>
         </div>
 
@@ -58,7 +59,7 @@
             <h3 class="panel-title">Hard Rule</h3>
           </div>
           <div id='hard-body' class="panel-body">
-            Coming soon...
+            Loading...
           </div>
         </div>
       </div>
@@ -191,9 +192,7 @@
   <script src="javascripts/bootstrap.min.js"></script>
   <script src="javascripts/main.js"></script>
   <script type="text/javascript">
-    if (top.location != self.location) {
-      top.location = self.location;
-    }
+    if (top.location != self.location) { top.location = self.location; }
   </script>
   <script>
     $(document).ready(function() {
@@ -247,6 +246,7 @@
         $("#hard-button").addClass("active");
         $(".panel-info").hide();
         $(".panel-warning").hide();
+        $("#hard-body").text(hardRule());
         $(".panel-danger").show();
       });
 

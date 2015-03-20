@@ -3,6 +3,8 @@ var colors = ["yellow", "black", "green", "blue"];
 var sizes = ["small", "medium", "large"];
 var quantities = ["two", "three"];
 var orientations = ["grounded", "ungrounded", "upright", "flat"];
+var fractions = ["half", "third", "fourth"];
+var evenOrOdd = ["even", "odd"];
 
 
 function randomSelection(array) {
@@ -12,22 +14,23 @@ function randomSelection(array) {
 function easyRule () {
   var rule = firstClause;
   var number = randomSelection([0, 1, 2, 3, 4, 5, 6, 7, 8, 9]);
+  var color, size, quantity, orientation;
 
   switch(number) {
     case 0:
       rule += "it has " + randomSelection(quantities) + " or more " + randomSelection(colors) + " pieces.";
       break;
     case 1:
-      rule += "is has exactly one " + randomSelection(sizes) + " " + randomSelection(orientations) + " " + randomSelection(colors) + " piece.";
+      rule += "it has exactly one " + randomSelection(sizes) + " " + randomSelection(orientations) + " " + randomSelection(colors) + " piece.";
       break;
     case 2:
       rule += "it has exactly two " + randomSelection(sizes) + " " + randomSelection(colors) + " pieces.";
       break;
     case 3:
-      rule += "is has at least one " + randomSelection(colors) + " piece pointing at a " + randomSelection(colors) + " piece.";
+      rule += "it has at least one " + randomSelection(colors) + " piece pointing at a " + randomSelection(colors) + " piece.";
       break;
     case 4:
-      rule += "is has exactly one " + randomSelection(colors) + " piece and exactly one " + randomSelection(sizes) + " piece.";
+      rule += "it has exactly one " + randomSelection(colors) + " piece and exactly one " + randomSelection(sizes) + " piece.";
       break;
     case 5:
       rule += "it has an equal number of " + randomSelection(colors) + " and " + randomSelection(sizes) + " pieces.";
@@ -52,13 +55,14 @@ function easyRule () {
 function mediumRule () {
   var rule = firstClause;
   var number = randomSelection([0, 1, 2, 3, 4, 5, 6, 7, 8, 9]);
+  var color, size, quantity, orientation;
 
   switch(number) {
     case 0:
       rule += "all flat pieces point at " + randomSelection(colors) + " pieces, and there exists at least one flat piece.";
       break;
     case 1:
-      var color = randomSelection(colors);
+      color = randomSelection(colors);
       rule += "all of the " + color + " pieces are " + randomSelection(orientations) + ", and there exists at least one " + color + " piece.";
       break;
     case 2:
@@ -80,11 +84,76 @@ function mediumRule () {
       rule += "a " + randomSelection(sizes) + " piece touches a " + randomSelection(orientations) + " piece.";
       break;
     case 8:
-      var orientation = randomSelection(orientations);
+      orientation = randomSelection(orientations);
       rule += "all of the " + orientation + " pieces are " + randomSelection(sizes) + ", and there exists at least one " + orientation + " piece.";
       break;
     case 9:
       rule += "it has a " + randomSelection(orientations) + " piece, but no " + randomSelection(colors) + " pieces.";
+      break;
+  }
+
+  return rule;
+}
+
+function hardRule () {
+  var rule = firstClause;
+  var number = randomSelection([0, 1, 2, 3, 4, 5, 6, 7, 8, 9]);
+  var fraction, size, quantity, color, orientation, oddness;
+
+  switch(number) {
+    case 0:
+      fraction = randomSelection(fractions);
+      color = randomSelection(colors);
+      rule += "exactly one " + fraction + " of the pieces are " + color + ".";
+      break;
+    case 1:
+      fraction = randomSelection(fractions);
+      size = randomSelection(sizes);
+      rule += "exactly one " + fraction + " of the pieces are " + size + ".";
+      break;
+    case 2:
+      color = randomSelection(colors);
+      oddness = randomSelection(evenOrOdd);
+      size = randomSelection(sizes);
+      rule += "it has a flat " + color + " piece pointing at an " + oddness + " number of " + size + " pieces.";
+      break;
+    case 3:
+      fraction = randomSelection(fractions);
+      size = randomSelection(sizes);
+      quantity = randomSelection(quantities);
+      color = randomSelection(colors);
+      rule += "exactly one " + fraction + " of the pieces are " + size + " or there are exactly " + quantity + " " + color + " pieces.";
+      break;
+    case 4:
+      color = randomSelection(colors);
+      size = randomSelection(sizes);
+      rule += "there are no " + color + " or " + size + " pieces.";
+      break;
+    case 5:
+      size = randomSelection(sizes);
+      oddness = randomSelection(evenOrOdd);
+      color = randomSelection(colors);
+      rule += "there are no " + size + " pieces and there are an " + oddness + " number of " + color + " pieces.";
+      break;
+    case 6:
+      fraction = randomSelection(fractions);
+      size = randomSelection(sizes);
+      color = randomSelection(colors);
+      rule += "exactly one " + fraction + " of the pieces are either " + size + " or " + color + " or both.";
+      break;
+    case 7:
+      orientation = randomSelection(orientations);
+      color = randomSelection(colors);
+      rule += "it has a " + orientation + " piece or a " + color + " piece, but not both.";
+      break;
+    case 8:
+      rule += "it doesn't have two pieces of the same " + randomSelection(["size", "color", "orientation"]) + ".";
+      break;
+    case 9:
+      quantity = randomSelection(quantities);
+      oddness = randomSelection(evenOrOdd);
+      size = randomSelection(sizes);
+      rule += "it has exactly " + quantity + " pieces of the same color or an " + oddness + " number of " + size + " pieces." ;
       break;
   }
 
